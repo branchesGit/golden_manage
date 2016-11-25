@@ -39,7 +39,10 @@ const GoodsTypesInfo = [
 	}
 ];
 
+const SUPER_TYPE_ID = '1';
+
 module.exports = {
 	ModulesInfo,
-	GoodsTypesInfo
+	GoodsTypesInfo,
+	SUPER_TYPE_ID
 }

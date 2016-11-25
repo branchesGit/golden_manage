@@ -9,14 +9,49 @@ var pool = mysql.createPool({
 });
 
 
-function getQueryConection( sql, cb ){
+function getQueryConection( /*sql, cb, errHandle */){
+	var idx = 0;
+	var sql = arguments[ idx ];
+
+	var susHandler = arguments[ ++idx ];
+	var data;
+
+	if( typeof susHandler !== 'function' )
+	{
+		data = susHandler;
+		susHandler = arguments[ ++idx ];
+	}
+
+	var errHandler = arguments[ ++idx ];
+
 	pool.getConnection(function(err,connection){
-		connection.query( sql, function( err, rows ){
-			if( err ) throw err;
-			//处理查询出来的结果
-			cb( rows );
-			connection.release();
-		})
+
+		if( data ){
+			connection.query( sql, data, function( err, rows ){
+				if( err ){
+					if( errHandle ){
+						errHandle && errHandle( err );	
+					}
+				} else {
+					//处理查询出来的结果
+					susHandler( rows );
+					connection.release();
+				}
+			})
+		} else {
+			connection.query( sql, function( err, rows ){
+				if( err ){
+					if( errHandle ){
+						errHandle && errHandle( err );	
+					}
+				} else {
+					//处理查询出来的结果
+					susHandler( rows );
+					connection.release();
+				}
+			})
+		}
+		
 	})
 }
 

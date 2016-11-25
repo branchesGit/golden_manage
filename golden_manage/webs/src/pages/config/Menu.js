@@ -44,7 +44,7 @@ class ManageMenu extends React.Component
 				childMenu.push( this.getMenu(subMenu[i]) );
 			}
 
-			return (<SubMenu title={menu.menuName}>{childMenu}</SubMenu>
+			return (<SubMenu key={menu.moduleID} title={menu.menuName}>{childMenu}</SubMenu>
 			);
 		}
 		else

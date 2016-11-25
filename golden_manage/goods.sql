@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS goodstype;
+
+CREATE TABLE  goodstype(
+	goodsTypeId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	goodsTypeName VARCHAR(16) NOT NULL UNIQUE,
+	superGoodsTypeId INT,
+	cdate TIMESTAMP NOT NULL DEFAULT NOW() 
+);
+
+
+SELECT * FROM goodstype;
