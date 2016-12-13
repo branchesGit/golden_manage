@@ -12,7 +12,7 @@ var uglify = require('gulp-uglify');
 
 
 gulp.task('clean', function(){
-	return gulp.src('./build/').pipe( clean() );
+	return gulp.src('./build/*.js').pipe( clean() );
 })
 
 
@@ -29,7 +29,7 @@ gulp.task('reload_by_js', function(){
 });
 
 
-var JSPaths = ['./src/'];
+var JSPaths = ['./src/pages/**/**/.js',"./**/*.scss", './src/pages/**/**/**/*.js', './src/pages/**/**/**/**/*.js'];
 gulp.task( 'server', ['miniJS'], function(){
 	browserSync.init({
 	server: {
@@ -39,10 +39,11 @@ gulp.task( 'server', ['miniJS'], function(){
 
 	//修改html时，加载页面
 	gulp.watch("*.html").on("change", reload);
-	gulp.watch("./**/*.css").on("change", reload);
-	gulp.watch( JSPaths, ['reload_by_js'] );
-	
-	var watcherJS = gulp.watch( './pages/**/*.js', ['reload_by_js'] );
+	//gulp.watch( JSPaths, ['reload_by_js'] );
+	//gulp.watch( './src/pages/**/**/**/**/*.js', ['reload_by_js'] );
+	var watcherJS = gulp.watch( JSPaths, ['reload_by_js'] );
+
+	//var watcherJS = gulp.watch( JSPaths, ['reload_by_js'] );
 
 	watcherJS.on('change', function(event){
 		console.log('client JS have change, file path is ' + event.path );

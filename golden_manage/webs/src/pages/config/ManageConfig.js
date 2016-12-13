@@ -15,6 +15,11 @@ const ModulesInfo = {
 					menuName: '商品类型',
 					linkTo: 'manages/goodsstore/goodstypesmanage/goodsTypesManagement',
 					moduleID: 'goods-types-management'
+				},
+				{
+					menuName: '添加商品',
+					linkTo: 'manages/goodsstore/goodsoriginmanage/goodsManagement',
+					moduleID: 'goods-management'
 				}
 			]
 		},
@@ -23,7 +28,26 @@ const ModulesInfo = {
 			menuName: '销售商品',
 			linkTo: 'mananges/soldGoods',
 			moduleID: 'sold-goods'
-		}
+		},
+		/*
+		{
+			menuName: '教师能力评估',
+			//linkTo: 'manages/goldenManagement',
+			moduleID: "manage-goods",
+			subMenu: [
+				{
+					menuName: '教师基本分析',
+					linkTo: 'exam/teacherAbilityAnalysis/basicAbilityAnalysis',
+					moduleID: "gbasicAbilityAnalysis",
+				},
+				{
+					menuName: '教师增量分析',
+					linkTo: 'exam/teacherIncrementAnalysis/incrementAnalysis',
+					moduleID: 'incrementAnalysis'
+				},
+				
+			]
+		}*/
 	]
 }
 
@@ -40,9 +64,11 @@ const GoodsTypesInfo = [
 ];
 
 const SUPER_TYPE_ID = '1';
+const SUB_TYPE_ID = '2';
 
 module.exports = {
 	ModulesInfo,
 	GoodsTypesInfo,
-	SUPER_TYPE_ID
+	SUPER_TYPE_ID,
+	SUB_TYPE_ID
 }

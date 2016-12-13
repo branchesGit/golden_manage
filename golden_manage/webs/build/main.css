@@ -1,1 +1,138 @@
-body,div,h5,h6,html,li,p,ul{margin:0;padding:0}#app{background:#ECEFF4;width:100%;height:100%}#app .title{font-size:25px;text-align:center;-webkit-transform:scale(.8);transform:scale(.8)}#app .manage-menu{width:240px;position:fixed;top:0;left:0;height:100%;background:#FFF;box-shadow:2px 2px 2px 1px rgba(0,0,0,.2)}#app .manage-wrapper{height:100%;zoom:1;position:absolute;left:250px;right:1px}#app .manage-wrapper .brh-manage-wrapper{padding:10px;margin-top:10px;background:#FFF;box-shadow:2px 0 5px rgba(0,200,200,.3);border-radius:5px}#app .manage-wrapper .brh-manage-wrapper .ant-input-wrapper .ant-input{max-width:120px}#app .manage-wrapper .brh-manage-wrapper .item-name{margin:0 5px}#app .brh-select{min-width:120px;display:inline-block;margin:0 10px}#app .brh-select .ant-select{width:100%}#app .goods-manage{margin-top:10px}
+@charset "UTF-8";
+html, body, div, h5, h6, p, ul, li {
+  margin: 0px;
+  padding: 0px; }
+
+#app {
+  background: #ECEFF4;
+  width: 100%;
+  height: 100%; }
+  #app .title {
+    font-size: 25px;
+    text-align: center;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8); }
+  #app .manage-menu {
+    width: 240px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #FFF;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  #app .manage-wrapper {
+    height: 100%;
+    zoom: 1;
+    position: absolute;
+    left: 250px;
+    right: 1px; }
+    #app .manage-wrapper .brh-manage-wrapper {
+      padding: 10px;
+      margin-top: 10px;
+      background: #FFF;
+      box-shadow: 2px 0px 5px rgba(0, 200, 200, 0.3);
+      border-radius: 5px; }
+      #app .manage-wrapper .brh-manage-wrapper .ant-input-wrapper .ant-input {
+        max-width: 120px; }
+      #app .manage-wrapper .brh-manage-wrapper .item-name {
+        margin: 0 5px; }
+  #app .brh-select {
+    min-width: 120px;
+    display: inline-block;
+    margin: 0 10px; }
+  #app .brh-select .ant-select {
+    width: 100%; }
+  #app .goods-manage {
+    margin-top: 10px; }
+  #app .brh-manage-wrapper h3 {
+    margin: 10px 0; }
+  #app .goods-types-manage {
+    background: #FFF;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #app .type-item {
+    display: inline-block; }
+  #app .right-btns {
+    position: relative;
+    margin: 10px 0;
+    height: 30px;
+    line-height: 30px; }
+    #app .right-btns .btns {
+      position: absolute;
+      right: 10px; }
+      #app .right-btns .btns button {
+        margin: 0 10px; }
+  #app .brh-overview-wrapper {
+    margin-top: 10px; }
+    #app .brh-overview-wrapper .brh-opers i {
+      display: inline-block;
+      margin: 0 10px;
+      cursor: pointer; }
+  #app .brh-upload-file-wrapper .brh-upload {
+    display: inline-block; }
+  #app .brh-upload-file-wrapper .brh-upload-suffix {
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    margin-left: 10px; }
+  #app .brh-goods-wrapper {
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    margin-top: 5px; }
+
+.brh-card {
+  border: 1px solid grad;
+  background: #FFF;
+  padding: 10px;
+  /* alert组件不显示背景颜色*/
+  /* 学科组合*/
+  /** 映射分 原始分 text */
+  /** 映射分 原始分 圆角*/
+  /*教师能力分析：*/ }
+  .brh-card .alert-no-back .ant-alert {
+    border: none;
+    background-color: transparent; }
+  .brh-card .subj-comb-analyze {
+    border: 1px dotted #aaaaaa;
+    border-radius: 10px;
+    margin: 5px 0px;
+    width: 80%;
+    padding: 5px; }
+  .brh-card .subj-comb-analyze .ant-checkbox-group {
+    padding: 15px;
+    float: left; }
+  .brh-card .subj-comb-analyze .ant-checkbox-group:first-child {
+    border-right: 1px dashed #aaaaaa; }
+  .brh-card .score-round-text {
+    float: left;
+    font-size: 20px;
+    line-height: 60px; }
+  .brh-card .score-round {
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    box-shadow: 1px 1px 3px 0 #cbcbcb;
+    cursor: pointer;
+    color: #26A0F3;
+    font-weight: bold;
+    background-color: #ffffff;
+    font-size: 14px;
+    float: left;
+    margin: 0px 5px; }
+  .brh-card .score-round.active {
+    border: 1px solid #d5f1fd;
+    background-color: #26A0F3;
+    color: #ffffff;
+    box-shadow: 1px 1px 3px 0 rgba(0, 0, 0, 0.12); }
+  .brh-card .img-bar-wrapper {
+    position: relative;
+    padding: 20px 20px; }
+  .brh-card .img-bar-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 190px; }

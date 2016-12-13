@@ -36,10 +36,34 @@ var routes = {
 					cb( null, require("./pages/manages/goodsstore/goodstypesmanage/GoodsTypesManagement") );
 				})
 			}
+		},
+		{
+			path: 'manages/goodsstore/goodsoriginmanage/goodsManagement',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/manages/goodsstore/goodsoriginmanage/GoodsManagement") );
+				})
+			}
+		},
+		{
+			path: 'exam/teacherAbilityAnalysis/basicAbilityAnalysis',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/Exam/TeacherAbilityAnalysis/BasicAbilityAnalysis/BasicAbilityAnalysis") );
+				})
+			}
+		},
+		{
+			path: 'exam/teacherIncrementAnalysis/incrementAnalysis',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/Exam/TeacherAbilityAnalysis/TeacherIncrementAnalysis/IncrementAnalysis") );
+				})
+			}
 		}
 	]
 };
 
 
 //最终渲染
-render( <Router history={hashHistory} routes={routes}/>, document.getElementById('app'));
+render(<Router history={hashHistory} routes={routes}/>, document.getElementById('app'));

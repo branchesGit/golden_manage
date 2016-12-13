@@ -25,6 +25,7 @@ module.exports = {
         require('autoprefixer')    //调用autoprefixer插件,css3自动补全
     ],
 
+    
     devServer: {
         // contentBase: './src/views'  //本地服务器所加载的页面所在的目录
         port: 8888,
@@ -32,7 +33,7 @@ module.exports = {
         historyApiFallback: true,  //不跳转
         inline: true  //实时刷新
     },
-
+    
     plugins: [
         new ExtractTextPlugin('main.css'),
     ]

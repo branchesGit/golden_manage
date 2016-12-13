@@ -15,4 +15,19 @@ router.get('/', function(req, res, next) {
 	getQueryConection( 'select * from t_user', cb );
 });
 
+router.get('/getOriginGoods', function(req,res,next){
+	var susHandler = function( rows ){
+
+	},
+
+	errHandler = function( err ){
+
+	};
+
+	var sql = 'select * from goods';
+	
+	getQueryConection( )
+
+});
+
 module.exports = router;

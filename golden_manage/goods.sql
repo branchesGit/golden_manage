@@ -9,3 +9,15 @@ CREATE TABLE  goodstype(
 
 
 SELECT * FROM goodstype;
+
+
+CREATE TABLE goods (
+	goodsId INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	goodsNO VARCHAR(16) NOT NULL UNIQUE,
+	goodsName VARCHAR(20) NOT NULL,
+	goodsTypeName VARCHAR(20) NOT NULL,
+	goodsWeight VARCHAR(10) ,
+	unitFee VARCHAR(6),
+	originPrice VARCHAR(8),
+	inlayFee  VARCHAR(10)
+);

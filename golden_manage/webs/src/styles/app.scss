@@ -92,6 +92,117 @@ html, body, div, h5, h6, p, ul, li {
             }
         }
     }
+
+    .brh-overview-wrapper{
+        margin-top: 10px;
+
+        .brh-opers i{
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+
+    .brh-upload-file-wrapper{
+
+        .brh-upload{
+            display: inline-block;
+        }
+
+        .brh-upload-suffix{
+            display:inline-block;
+            position: relative;
+            top: -10px;
+            margin-left: 10px;
+        }
+    }
+
+    .brh-goods-wrapper{ 
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
 }
+
+.brh-card{
+    border: 1px solid grad;
+    background: #FFF;
+    padding: 10px;
+
+    /* alert组件不显示背景颜色*/
+    .alert-no-back .ant-alert{
+        border: none;
+        background-color: transparent;
+    }
+    /* 学科组合*/
+    .subj-comb-analyze{
+        border: 1px dotted #aaaaaa;
+        border-radius: 10px;
+        margin: 5px 0px;
+        width: 80%;
+        padding: 5px;
+    }
+    .subj-comb-analyze .ant-checkbox-group{
+        padding: 15px;
+        float: left;
+    }
+    .subj-comb-analyze .ant-checkbox-group:first-child{
+        border-right: 1px dashed #aaaaaa;
+    }
+
+
+    /** 映射分 原始分 text */
+    .score-round-text{
+        float: left;
+        font-size: 20px;
+        line-height: 60px;
+    }
+    /** 映射分 原始分 圆角*/
+    .score-round{
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        -ms-border-radius:50%;
+        -khtml-border-radius:50%;
+        border-radius:50%;
+        border: 1px solid rgba(0,0,0,0.18);
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        -moz-box-shadow: 0 1px 3px #cbcbcb;
+        -webkit-box-shadow: 0 1px 3px #cbcbcb;
+        box-shadow: 1px 1px 3px 0 #cbcbcb;
+        cursor: pointer;
+        color: #26A0F3;
+        font-weight: bold;
+        background-color: #ffffff;
+        font-size: 14px;
+        float: left;
+        margin: 0px 5px;
+    }
+    .score-round.active{
+        border: 1px solid #d5f1fd;
+        background-color: #26A0F3;
+        color: #ffffff;
+        box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.12);
+    }
+
+
+    /*教师能力分析：*/
+    .img-bar-wrapper{
+        position:relative;
+        padding: 20px 20px;
+    }
+
+    .img-bar-wrapper i{
+        position: absolute;
+        right: 10px;
+        top: 190px;
+    }
+    
+}
+
+
 
 
