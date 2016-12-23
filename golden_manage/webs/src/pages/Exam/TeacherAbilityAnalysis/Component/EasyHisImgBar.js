@@ -3,11 +3,12 @@ import { Icon } from 'antd'
 import { tween  } from '../../EasyTween'
 //这里先做个简单的处理。
 //支持简单的画背景图的柱状图
-const UP_IMG_URL = './src/images/up.png';
-const DOWN_IMG_URL = './src/images/down.png'
-const BAR_WIDTH = 240;
+const UP_IMG_URL = './src/images/blue-arrow.jpg';
+const DOWN_IMG_URL = './src/images/blue-arrow.jpg'
+const BAR_WIDTH = 120;
 const { easeIn, strongEaseIn } = tween;
 const DURATION = 300; //默认动画执行时间：
+
 window.requestAnimFrame = (function(){
   return  window.requestAnimationFrame || 
     window.webkitRequestAnimationFrame || 
@@ -158,7 +159,7 @@ class EasyHisImgBar extends React.Component
 
 		var isUp = value > 0 ?  true : false;
 
-		if( context )
+		if( context && value )
 		{
 			var animate = (function(){
 				var startTime = +new Date;
@@ -188,16 +189,19 @@ class EasyHisImgBar extends React.Component
 					var imgW = img.width, imgH = img.height;
 					var xCount = Math.floor( barW / imgW ), yCount = Math.floor( Math.abs( curBarH ) / imgH ) ;
 
-					if( ( DURATION - duration ) < DURATION / 10 && !yCount )
+					
+					if( (duration - DURATION) < DURATION / 10 && !yCount )
 					{
 						yCount = 1;
-					}
 
-					if( yCount )
-					{
-						context.clearRect( startX,  isUp ? startH - 1 : startH + 1, barW, curBarH);
+						context.clearRect( startX,  isUp ? startH - 1 : startH + 1, barW, isUp ? 0 - imgH : imgH  );	
 					}
+					else
+					{
+						context.clearRect( startX,  isUp ? startH - 1 : startH + 1,  barW, curBarH  );	
+					}				
 					
+					context.clearRect( startX,  isUp ? startH - 1 : startH + 1,  barW, curBarH  );
 					for( var i = 0; i < xCount; i++ )
 					{
 						for( var j = 0; j < yCount; j++ )
@@ -208,6 +212,18 @@ class EasyHisImgBar extends React.Component
 							context.drawImage( img, startx, starty, imgW, imgH );
 						}
 					}
+
+					/*
+					for( var i = 0; i < xCount; i++ )
+					{
+						
+						var startx  =  startX + i * imgW ;
+						var starty = isUp ? startH - ( yCount + 1) * imgH : startH + yCount * imgH ;
+						var h = Math.abs( curBarH ) - yCount * imgH;
+
+						context.drawImage( img, 10, 10, imgW, h, startx, starty,  imgW, h );
+						
+					}*/
 
 					requestAnimFrame( animate );	
 				}
@@ -255,7 +271,14 @@ class EasyHisImgBar extends React.Component
 			}
 			
 		}
-
+		else
+		{
+			var txt = context.measureText( name );
+			var width = txt.width;
+			var barW = endX - startX;
+			var txtStartX = ( barW - width ) / 2 + startX;
+			context.fillText( name, txtStartX, startH + 30 );
+		}
 	}
 
 	//画出0刻度线：

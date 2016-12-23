@@ -19,7 +19,6 @@ class ManageMenu extends React.Component
 	{
 		var { menus } = ModulesInfo;
 		var i = 0, len = menus && menus.length || 0;
-
 		var ary = [];
 
 		for( ; i < len; i++ )

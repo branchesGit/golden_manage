@@ -205,7 +205,7 @@ export var teacherWeightInfos = {
 			{
 				teacherID: '1',
 				teacherName: '二',
-				score: 0.5
+				score: 0
 			},
 			{
 				teacherID: '1',

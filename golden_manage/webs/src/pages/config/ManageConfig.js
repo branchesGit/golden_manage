@@ -29,11 +29,11 @@ const ModulesInfo = {
 			linkTo: 'mananges/soldGoods',
 			moduleID: 'sold-goods'
 		},
-		/*
+		
 		{
 			menuName: '教师能力评估',
 			//linkTo: 'manages/goldenManagement',
-			moduleID: "manage-goods",
+			moduleID: "teacher-ability",
 			subMenu: [
 				{
 					menuName: '教师基本分析',
@@ -47,7 +47,7 @@ const ModulesInfo = {
 				},
 				
 			]
-		}*/
+		}
 	]
 }
 
