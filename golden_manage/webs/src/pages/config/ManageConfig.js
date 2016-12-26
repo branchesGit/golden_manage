@@ -1,7 +1,7 @@
 
 const ModulesInfo = {
 	menus: [
-		{
+		/*{
 			menuName: '库存管理',
 			//linkTo: 'manages/goldenManagement',
 			moduleID: "manage-goods",
@@ -47,7 +47,26 @@ const ModulesInfo = {
 				},
 				
 			]
+		}*/
+
+		{
+			menuName: '新中考规则-选科分析',
+			moduleID: 'new-senior-entrance-rule',
+			subMenu: [
+				{
+					menuName: '新中考-年级整体分析',
+					linkTo: 'exam/seniorEntranceExamRuleChooseSubject/gradeAnalysis',
+					moduleID: "gradeAnalysis",
+				},
+				{
+					menuName: '新中考-班级整体分析',
+					linkTo: 'exam/seniorEntranceExamRuleChooseSubject/classAnalysis',
+					moduleID: "classAnalysis",
+				}
+			]
+
 		}
+
 	]
 }
 

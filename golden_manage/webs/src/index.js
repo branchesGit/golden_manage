@@ -60,6 +60,25 @@ var routes = {
 					cb( null, require("./pages/Exam/TeacherAbilityAnalysis/TeacherIncrementAnalysis/IncrementAnalysis") );
 				})
 			}
+		},
+
+		{
+			
+			path: 'exam/seniorEntranceExamRuleChooseSubject/gradeAnalysis',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/GradeAnalysis/GradeAnalysis.js") );
+				})
+			}
+		},
+		{
+			
+			path: 'exam/seniorEntranceExamRuleChooseSubject/classAnalysis',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/ClassAnalysis/ClassAnalysis.js") );
+				})
+			}
 		}
 	]
 };
