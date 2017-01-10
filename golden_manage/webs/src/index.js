@@ -79,7 +79,18 @@ var routes = {
 					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/ClassAnalysis/ClassAnalysis.js") );
 				})
 			}
-		}
+		},
+
+		{
+			
+			path: 'exam/seniorEntranceExamRuleChooseSubject/scoreFilter',
+			getComponent:function( location,cb ){
+				require.ensure( [], function(require){
+					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/ScoreFilter.js") );
+				})
+			}
+		},
+
 	]
 };
 

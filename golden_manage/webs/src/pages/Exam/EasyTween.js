@@ -1,3 +1,8 @@
+//t: 动画已消耗的时间，
+//b:小球的原始位置,
+//c: 小球的目标位置， 
+//d:动画持续的总时间。
+
 export var tween = {
 	linear: function( t, b, c, d ){
 		return c * t / d + b;

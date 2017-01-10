@@ -62,6 +62,12 @@ const ModulesInfo = {
 					menuName: '新中考-班级整体分析',
 					linkTo: 'exam/seniorEntranceExamRuleChooseSubject/classAnalysis',
 					moduleID: "classAnalysis",
+				},
+
+				{
+					menuName: '搜索栏',
+					linkTo: 'exam/seniorEntranceExamRuleChooseSubject/scoreFilter',
+					moduleID: "scoreFilter",
 				}
 			]
 
