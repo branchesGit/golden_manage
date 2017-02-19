@@ -1,0 +1,404 @@
+html, body, div, h5, h6, p, ul, li {
+    margin: 0px;
+    padding: 0px;
+}
+
+#app {
+    background: #ECEFF4;
+   
+    width: 100%;
+    height: 100%;
+
+    .title {
+        font-size: 25px;
+        text-align: center;
+        transform: scale(0.8);
+    }
+
+    .manage-menu{
+    	width: 240px;
+    	position: fixed;
+    	top: 0;
+    	left:0;
+    	height: 100%;
+    	background: #FFF;
+    	box-shadow:2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    .manage-wrapper{
+    	height: 100%;
+    	zoom: 1;
+    	position: absolute;
+    	left: 250px; 
+    	right: 1px;
+    	.brh-manage-wrapper{
+    		padding: 10px;
+    		margin-top: 10px;
+	    	background: #FFF;
+	    	box-shadow: 2px 0px 5px rgba(0, 200,200, 0.3);
+	    	border-radius: 5px;
+
+            .ant-input-wrapper .ant-input{
+                max-width: 120px;
+              
+            }
+
+            .item-name{
+                margin: 0 5px;
+            }
+	    }
+    }
+
+    .brh-select{
+    	min-width: 120px;
+    	display: inline-block;
+    	margin: 0 10px;
+    }
+
+    .brh-select .ant-select{
+    	width: 100%;
+    }
+
+    .goods-manage{
+    	margin-top: 10px;
+    }
+
+    .brh-manage-wrapper h3{
+        margin: 10px 0;
+    }
+
+    .goods-types-manage{
+        background: #FFF;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .type-item{
+        display: inline-block;
+    }
+
+    .right-btns{
+        position: relative;
+        margin: 10px 0;
+        height: 30px;
+        line-height: 30px;
+        .btns{
+            position: absolute;
+            right: 10px;
+            
+            button{
+                margin: 0 10px;
+            }
+        }
+    }
+
+    .brh-overview-wrapper{
+        margin-top: 10px;
+
+        .brh-opers i{
+            display: inline-block;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+    }
+
+    .brh-upload-file-wrapper{
+
+        .brh-upload{
+            display: inline-block;
+        }
+
+        .brh-upload-suffix{
+            display:inline-block;
+            position: relative;
+            top: -10px;
+            margin-left: 10px;
+        }
+    }
+
+    .brh-goods-wrapper{ 
+        padding: 10px;
+        background: #fff;
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+}
+
+.brh-card{
+    border: 1px solid grad;
+    background: #FFF;
+    padding: 10px;
+
+    /* alert组件不显示背景颜色*/
+    .alert-no-back .ant-alert{
+        border: none;
+        background-color: transparent;
+    }
+    /* 学科组合*/
+    .subj-comb-analyze{
+        border: 1px dotted #aaaaaa;
+        border-radius: 10px;
+        margin: 5px 0px;
+        width: 80%;
+        padding: 5px;
+    }
+    .subj-comb-analyze .ant-checkbox-group{
+        padding: 15px;
+        float: left;
+    }
+    .subj-comb-analyze .ant-checkbox-group:first-child{
+        border-right: 1px dashed #aaaaaa;
+    }
+
+
+    /** 映射分 原始分 text */
+    .score-round-text{
+        float: left;
+        font-size: 20px;
+        line-height: 60px;
+    }
+    /** 映射分 原始分 圆角*/
+    .score-round{
+        -moz-border-radius:50%;
+        -webkit-border-radius:50%;
+        -ms-border-radius:50%;
+        -khtml-border-radius:50%;
+        border-radius:50%;
+        border: 1px solid rgba(0,0,0,0.18);
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        -moz-box-shadow: 0 1px 3px #cbcbcb;
+        -webkit-box-shadow: 0 1px 3px #cbcbcb;
+        box-shadow: 1px 1px 3px 0 #cbcbcb;
+        cursor: pointer;
+        color: #26A0F3;
+        font-weight: bold;
+        background-color: #ffffff;
+        font-size: 14px;
+        float: left;
+        margin: 0px 5px;
+    }
+    .score-round.active{
+        border: 1px solid #d5f1fd;
+        background-color: #26A0F3;
+        color: #ffffff;
+        box-shadow: 1px 1px 3px 0 rgba(0,0,0,0.12);
+    }
+
+
+    /*教师能力分析：*/
+    .img-bar-wrapper{
+        position:relative;
+        padding: 20px 20px;
+    }
+
+    .img-bar-wrapper i{
+        position: absolute;
+        right: 10px;
+        top: 190px;
+    }
+    
+}
+
+
+
+.score-analysis-filter{
+    border: 1px solid #ECECEC;
+    border-radius: 8px;
+
+    background: #FFF;
+    padding: 10px;
+
+    .inline{
+        display: inline-block;
+    }   
+
+    .brh-filter-group{
+        margin: 10px;
+
+        display: inline-block;
+
+        .ant-select {
+            display: inline-block;
+            max-width: 150px;
+            width: auto!important;
+        }
+    }
+
+    .score-types{
+        .brh-score-type{
+            display:inline-block;
+
+        }
+
+        .brh-score-type li{
+            border-radius: 50%;
+            border: 1px solid gray;
+            padding: 10px;
+            display:inline-block;
+            margin: 0 10px;
+        } 
+
+        .selected{
+            background: #F2CeCe;
+        }
+
+        
+    }
+
+    .brh-subjects-filter{
+        .head{
+            h3{
+                font-weight:normal;
+                font-size: 12px;
+                display: inline-block;
+            }
+
+            .ant-alert{
+                display: inline-block;
+            }
+        }
+
+        .ant-radio-group{
+            display:block;
+        }
+
+        .subjects-group{
+            border: 1px solid #ECECEC;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            margin-left: 0;
+            display:inline-block;
+        }
+
+        .line{
+            display:inline-block;
+            padding-right: 20px;
+        } 
+
+        .dashed {
+            border-right: 1px dotted #CCC;
+            margin-right: 20px;
+        }
+
+        .ant-checkbox-group{
+            display: inline-block;
+        }
+
+    }
+
+
+}
+
+body{
+    overflow:hidden;
+}
+
+
+.analysis-btns{
+    display: none;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+   
+}
+
+.mark-layer-wrapper {
+    position: fixed;
+    z-index: 11; 
+    left: 210px;
+    right: 0;
+}
+
+.mark-layer-wrapper .analysis-btns{
+    display: block;
+}
+
+
+.mark-layer{
+    transform: all 0.6s ease-in;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+
+    opacity:0.5;
+    filter:alpha(opacity=50);
+    background-color: rgb( 0,0,0 );
+}
+
+
+.subject-info{
+    overflow: hidden;
+    position: relative;
+}
+
+.animate-subject{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width:100%;
+}
+
+.title-bar{
+   
+    height: 20px;
+    overflow:hidden;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.legend li{
+    float: left;
+    width: 50%;
+}
+
+.subj-name{
+    line-height: 20px;
+    height:20px;
+    display:inline-block;
+
+}
+
+.brh-hide{
+    display:none;
+}
+
+.exam-name{
+    text-align: center;
+}
+
+
+
+.subject-detail-info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+}
+
+.subject-score{
+    display:inline-block;
+    margin-left:-50%;
+    margin-top:-50%;
+    color: #FFF;
+}
+
+.best-subjects{
+    opacity: 0.8;   
+}
+
+.target-subjects{
+    
+}
+
+.comparison-content{
+    margin-top: 40px;
+}

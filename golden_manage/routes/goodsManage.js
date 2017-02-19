@@ -10,9 +10,12 @@ router.get('/', function(req, res, next) {
 	var cb = function( rows ){
 		var result = JSON.stringify( rows );
 		res.send( result );
+	},
+	fail = function( err ){
+		console.log( err );	
 	};
 
-	getQueryConection( 'select * from t_user', cb );
+	getQueryConection( 'select * from goods', cb, fail );
 });
 
 router.get('/getOriginGoods', function(req,res,next){

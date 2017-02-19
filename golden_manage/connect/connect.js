@@ -3,9 +3,9 @@ var mysql = require('mysql');
 var pool = mysql.createPool({
 	host: 'localhost',
 	user: 'root',
-	password: 'root',
+	password: 'admin',
 	database: 'goodsstore',
-	port: 13306
+	port: 3306
 });
 
 
@@ -29,9 +29,7 @@ function getQueryConection( /*sql, cb, errHandle */){
 		if( data ){
 			connection.query( sql, data, function( err, rows ){
 				if( err ){
-					if( errHandle ){
-						errHandle && errHandle( err );	
-					}
+					errHandle && errHandle( err );	
 				} else {
 					//处理查询出来的结果
 					susHandler( rows );
@@ -41,9 +39,7 @@ function getQueryConection( /*sql, cb, errHandle */){
 		} else {
 			connection.query( sql, function( err, rows ){
 				if( err ){
-					if( errHandle ){
-						errHandle && errHandle( err );	
-					}
+					errHandle && errHandle( err );	
 				} else {
 					//处理查询出来的结果
 					susHandler( rows );

@@ -1,6 +1,6 @@
 'use strict';
 
-require('./styles/app.scss');
+require('./styles/app.less');
 
 import React from 'react';
 import ReactDom from 'react-dom';
@@ -25,7 +25,7 @@ var routes = {
 			path: 'mananges/soldGoods',
 			getComponent:function( location,cb ){
 				require.ensure( [], function(require){
-					cb( null, require("./pages/manages/SoldGoods") );
+					cb( null, require("./pages/manages/soldgoods/SoldGoods") );
 				})
 			}
 		},

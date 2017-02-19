@@ -1,3 +1,5 @@
+create database goodsstore;
+
 DROP TABLE IF EXISTS goodstype;
 
 CREATE TABLE  goodstype(
