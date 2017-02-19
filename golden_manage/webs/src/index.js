@@ -44,52 +44,7 @@ var routes = {
 					cb( null, require("./pages/manages/goodsstore/goodsoriginmanage/GoodsManagement") );
 				})
 			}
-		},
-		{
-			path: 'exam/teacherAbilityAnalysis/basicAbilityAnalysis',
-			getComponent:function( location,cb ){
-				require.ensure( [], function(require){
-					cb( null, require("./pages/Exam/TeacherAbilityAnalysis/BasicAbilityAnalysis/BasicAbilityAnalysis") );
-				})
-			}
-		},
-		{
-			path: 'exam/teacherIncrementAnalysis/incrementAnalysis',
-			getComponent:function( location,cb ){
-				require.ensure( [], function(require){
-					cb( null, require("./pages/Exam/TeacherAbilityAnalysis/TeacherIncrementAnalysis/IncrementAnalysis") );
-				})
-			}
-		},
-
-		{
-			
-			path: 'exam/seniorEntranceExamRuleChooseSubject/gradeAnalysis',
-			getComponent:function( location,cb ){
-				require.ensure( [], function(require){
-					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/GradeAnalysis/GradeAnalysis.js") );
-				})
-			}
-		},
-		{
-			
-			path: 'exam/seniorEntranceExamRuleChooseSubject/classAnalysis',
-			getComponent:function( location,cb ){
-				require.ensure( [], function(require){
-					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/ClassAnalysis/ClassAnalysis.js") );
-				})
-			}
-		},
-
-		{
-			
-			path: 'exam/seniorEntranceExamRuleChooseSubject/scoreFilter',
-			getComponent:function( location,cb ){
-				require.ensure( [], function(require){
-					cb( null, require("./pages/Exam/SeniorEntranceExamRuleChooseSubject/ScoreFilter.js") );
-				})
-			}
-		},
+		}
 
 	]
 };
