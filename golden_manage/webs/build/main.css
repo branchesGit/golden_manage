@@ -34,6 +34,7 @@ li {
   position: absolute;
   left: 250px;
   right: 1px;
+  border: 1px solid red;
 }
 #app .manage-wrapper .brh-manage-wrapper {
   padding: 10px;
@@ -316,3 +317,5 @@ body {
 .comparison-content {
   margin-top: 40px;
 }
+
+/*# sourceMappingURL=main.css.map*/

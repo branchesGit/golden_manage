@@ -14,7 +14,7 @@ class GoldTemplate extends React.Component
 
         return (
             <div>
-
+                golden
             </div>
         )
     }
