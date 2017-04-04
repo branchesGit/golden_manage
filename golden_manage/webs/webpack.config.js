@@ -1,15 +1,19 @@
 
 'use strict';
 
+var path = require('path');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");  //css单独打包
+var now = +new Date;
+
 
 module.exports = {
     devtool: 'source-map',
 
     entry: __dirname + '/src/index.js', //唯一入口文件
     output: {
-        path: __dirname + '/build', //打包后的文件存放的地方
-        filename: 'bundle.js' //打包后输出文件的文件名
+        path:  path.join( __dirname,"/dist/" ), //打包后的文件存放的地方
+        filename: '[name].js', //打包后输出文件的文件名
+        chunkFilename: '[name].'  + now + ".js" 
     },
 
     module: {
@@ -35,7 +39,7 @@ module.exports = {
     },
     
     plugins: [
-        new ExtractTextPlugin('main.css'),
+        new ExtractTextPlugin('[name].css'),
     ]
 
 }

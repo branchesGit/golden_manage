@@ -12,7 +12,7 @@ var uglify = require('gulp-uglify');
 
 
 gulp.task('clean', function(){
-	return gulp.src('./build/*.js').pipe( clean() );
+	return gulp.src('./dist/*.js').pipe( clean() );
 })
 
 
